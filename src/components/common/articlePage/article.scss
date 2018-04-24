@@ -1,0 +1,10 @@
+@media (max-width: 576px) {
+ .mobilePhoto {
+   width: 100%;
+ }
+}
+@media (min-width: 576px) {
+  .mobilePhoto {
+    width: 50%;
+  }
+ }

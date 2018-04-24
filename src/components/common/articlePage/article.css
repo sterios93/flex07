@@ -1,0 +1,15 @@
+.lineHeight {
+  line-height: 30px;
+}
+@media (max-width: 576px) {
+  .mobilePhoto {
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .mobilePhoto {
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=article.css.map */

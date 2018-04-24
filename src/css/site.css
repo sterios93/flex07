@@ -1,0 +1,159 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body .wrapper {
+  width: 85%;
+  margin: 0 auto;
+}
+
+body .social-nav-top {
+  background: black;
+  padding: 0px;
+}
+
+body .social-nav-top a {
+  padding-top: 0px;
+  padding: 5px;
+}
+
+body .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body main {
+  flex-grow: 1;
+}
+
+body main .main-navigation .logo {
+  font-size: 30px;
+}
+
+body main .main-intro {
+  background-image: url("./../images/main1.jpg");
+  background-size: cover;
+  height: 85vh;
+  background-repeat: no-repeat;
+  background-position-y: -150px;
+}
+
+body main .jumbotron {
+  background-color: rgba(30, 28, 28, 0.81);
+  color: white;
+  border: 1px solid white;
+}
+
+body main .where {
+  background: #06719f;
+}
+
+body main .short-descr {
+  max-height: 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+body main #map {
+  height: 300px;
+  width: 100%;
+}
+
+body main .tip {
+  background-color: rgba(30, 28, 28, 0.041);
+}
+
+body main .bg-1 {
+  background-image: url("https://images3.alphacoders.com/786/786607.jpg");
+  background-size: cover;
+  background-position-y: -100px;
+  height: 100%;
+}
+
+body main .bg-2 {
+  background-image: url("https://images6.alphacoders.com/608/608242.jpg");
+  background-size: cover;
+  background-position-y: -100px;
+  height: 100%;
+}
+
+body main .bg-3 {
+  background-image: url("https://images2.alphacoders.com/608/608051.jpg");
+  background-size: cover;
+  background-position-y: -100px;
+  height: 100%;
+}
+
+body main .bg-trainer {
+  background-image: url("../images/kinski-2.jpg");
+  background-repeat: no-repeat;
+  height: 60vh;
+  background-position-x: center;
+}
+
+body main .bg-trainer-descr {
+  background-image: url("../images/art.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: -56px;
+}
+
+body main .link-colors-trainer {
+  color: #06719f;
+}
+
+body .login-page {
+  height: 90vh;
+}
+
+body footer {
+  background-color: black;
+}
+
+body .row {
+  margin: 0px;
+}
+
+@media (max-width: 1000px) {
+  .main-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body main .main-intro {
+    height: auto;
+    background-position-y: 0px;
+  }
+  body .navbar-brand {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 990px) {
+  .btnClrMobile {
+    color: white;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 576px) {
+  body main .main-intro {
+    height: 70vh;
+    background-position-y: 0px;
+  }
+  body .wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@-moz-document url-prefix() {
+  .App {
+    height: 100vh;
+  }
+}
+/*# sourceMappingURL=site.css.map */
