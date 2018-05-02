@@ -41,27 +41,14 @@ class Card extends Component {
     return (
       <div className={`${col} text-center mb-5 p-0 p-sm-3`} >
         <article className='tip h-100'>
-          {/* <div style={photoStyles} />
-          <div className='description p-3'>
-            <p className='heading'>{title}</p>
-            <p className='short-descr'>
-              {shortDescription}
-            </p>
-            <p>Category: {category}</p>
-            <div class="card-footer">
-              <Link to={`/article/${category}/${id}`} className='btn btn-primary'>Read More</Link>
-              {userLoged && <button onClick={this.onClickDelete} className='btn btn-danger'>Delete</button>}
-            </div>
-          </div> */}
-
           <div className="card h-100">
             <div className="card-img-top" style={photoStyles} />
-            <div className="card-body description p-3">
+            <div className="card-body description p-3" style={{backgroundColor: 'rgba(0,0,0,.03)'}}>
               <p className="card-title short-descr">{title}</p>
               <p className="card-text mb-2 short-descr">{shortDescription}</p>
               <p className="card-subtitle text-muted">Category: {category}</p>
             </div>
-            <div className="card-footer text-muted">
+            <div className="card-footer border-0">
               <Link to={`/article/${category}/${id}`} className='btn btn-primary'>Read More</Link>
               {userLoged && <button onClick={this.onClickDelete} className='btn btn-danger'>Delete</button>}
             </div>

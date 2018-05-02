@@ -1,6 +1,3 @@
-.lineHeight {
-  line-height: 30px;
-}
 @media (max-width: 576px) {
   .mobilePhoto {
     width: 100%;

@@ -7,7 +7,7 @@ let MainIntro = (props) => {
     <section className='main-intro'>
       <div className='wrapper'>
         <div className='row d-flex justify-content-end flex-column'>
-          <MainNav linkColor={'text-white'} buttonMenuColorMobileSize={'btnClrMobile'} />
+          <MainNav linkColor={'text-white'} isHome={props.isHome} />
           <Jumbotron display={'d-none d-sm-block'}/>
         </div>
       </div>

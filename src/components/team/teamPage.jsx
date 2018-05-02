@@ -33,11 +33,11 @@ class Team extends Component {
       <section className='wrapper'>
         <MainNav linkColor={'text-dark'} />
         <section>
-          <h3 className='text-center'>LA FAMILIA</h3>
+          <h3 className='text-center'>Team 07</h3>
           <div className='photo-family' style={photoStyles}>
           </div>
           <div className='wrapper mt-4'>
-            <h1 className='text-center mb-3'>MEET THE SPARTANS</h1>
+            <h4 className='text-center mb-3'>MEET THE SPARTANS</h4>
             <div className='d-flex flex-wrap'>
              {teamArticles}
             </div>

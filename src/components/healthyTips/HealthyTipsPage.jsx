@@ -25,15 +25,15 @@ class HealthyTipsPage extends Component {
         <div className='wrapper'>
           <MainNav linkColor={'text-dark'} />
           <section className='row'>
-            <div className='aside col-12 col-xl-3 col-lg-3 col-md-3 col-sm-3 mt-3'>
+            <div className='aside col-12 col-md-3 mt-3'>
               <Aside />
             </div>
-            <div className='col-12 col-xl-9 col-lg-9 col-md-9 col-sm-9 mt-9 p-0'>
+            <div className='col-12 col-md-9 mt-9 p-0'>
               <Healthy
                 itemsToDisplay={6}
                 currPage={this.state.currentPage}
                 currCat={this.state.currentCategory}
-                title={'HEALTHY TIPS'}
+                title={'Fitness & Nutrition'}
                 col={'col-12 col-xl-4 col-lg-4 col-md-6 col-sm-6'}
                 isHealthy={this.state.isHealthy}
               />

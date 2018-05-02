@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 class Paginator extends Component {
-  render () {
+  render() {
     let currentCategory = this.props.currCat // take the category from the path
     let currentPage = Number(this.props.currPage) || 1
     let startPage = Number(currentPage) - 2 // to make Current page in the middle
@@ -41,19 +41,22 @@ class Paginator extends Component {
     return (
       <nav aria-label='Page navigation example'>
         <ul className='pagination justify-content-center'>
-          <li className='page-item'>
-            <Link to={`/healthy/1`} className='page-link'>Start</Link>
-          </li>
+          {numberOfPages > 1 &&
+            <li className='page-item'>
+              <Link to={`/healthy/${currentCategory}/1`} className='page-link'>Start</Link>
+            </li>
+          }
           {resultPages}
-          <li className='page-item'>
-            <Link to={`/healthy/${pagesToShow.length}`} className='page-link'>End</Link>
-          </li>
+          {numberOfPages > 1 && <li className='page-item'>
+            <Link to={`/healthy/${currentCategory}/${pagesToShow.length}`} className='page-link'>End</Link>
+          </li>}
+
         </ul>
       </nav>
     )
   }
 }
-function mapStateToProps (state) {
+function mapStateToProps(state) {
   return {
     allArticles: state.allArticles.articles
   }

@@ -65,11 +65,11 @@ class Article extends Component {
         <div className='wrapper'>
           <MainNav linkColor={'text-dark'} />
           <div className='row d-flex flex-row justify-content-center article'>
-            <div className='col-12 col-sm-10 p-0'>
+            <div className='col-12 p-0 p-sm-3'>
               <div className='description'>
                 <h1 className='text-center mb-3 link-colors-trainer'>{title}</h1>
                 <div>
-                  <p className=' w-100 text-center text-center text-sm-left'>
+                  <p className=' w-100 text-center text-center text-sm-left clearfix'>
                     <span className='mobilePhoto float-right ml-sm-1 mb-1' style={photoStyles} />
                     <span className='d-inline-block d-sm-inline lineHeight p-3 p-sm-0'>{description}</span>
                     </p>

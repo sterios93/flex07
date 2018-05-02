@@ -14,11 +14,14 @@ class Healthy extends Component {
     // make the hole array with articles
     let displayArr = []
     let articlesForArticlePage = []
+    // All articles from the redux
     let allArticles = this.props.articles
+
     for (let article in allArticles) {
       let id = article
       if (currentCategory === allArticles[article].category) {
         displayArr.push(<Card article={allArticles[article]} key={id} articleId={id} col={cardCol} />)
+        // Make array for articlePage
         articlesForArticlePage.push(<Card article={allArticles[article]} key={id} articleId={id} col={cardCol} />)
       } else if (currentCategory === 'All') {
           if(allArticles[article].category !== 'Team') { // dont display Team articles
@@ -34,14 +37,8 @@ class Healthy extends Component {
     let currentStart = ((currentPage * itemsPerPage)) - itemsPerPage
     let currentEnd = currentStart + itemsPerPage
     let itemsToDisplayHealthyPage = displayArr.slice(currentStart, currentEnd)
-
-    // if its article page show this
-    // let isArticle = this.props.isArticle
-    // let randomStartArticlePage = Math.floor(Math.random() * Math.floor(displayArr.length - itemsPerPage))
-    // let itemsToDisplayArticlePage = articlesForArticlePage.slice(randomStartArticlePage, randomStartArticlePage + itemsPerPage)
-    // if its home page show this -> ItemsToDisplay
+    // If its home page show this
     let isHome = this.props.isHome
-    // console.log('is article : ', isArticle)
     let randomStart = Math.floor(Math.random() * Math.floor(displayArr.length - itemsPerPage))
     let itemsToDisplayHome = displayArr.slice(randomStart, randomStart + itemsPerPage) // select a few to show
     return (
@@ -51,7 +48,6 @@ class Healthy extends Component {
         </div>
         <div className='row mt-5'>
           {isHome && itemsToDisplayHome}
-          {/* {isArticle && itemsToDisplayArticlePage } */}
           {isHealthyPage && itemsToDisplayHealthyPage}
         </div>
       </section>

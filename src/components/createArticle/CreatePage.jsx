@@ -25,7 +25,6 @@ class CreatePage extends Component {
     this.onSubmit = this.onSubmit.bind(this)
     this.onChangePicture = this.onChangePicture.bind(this)
     this.onCategoryAdd = this.onCategoryAdd.bind(this)
-    // this.writeArticleData = this.writeArticleData.bind(this)
   }
   onChange (e) {
     this.setState({[e.target.name]: e.target.value})
@@ -54,9 +53,7 @@ class CreatePage extends Component {
     // online
     let file = this.state.file
     await myPictureRef.putString(file, 'data_url').then((snapshot) => this.setState({ imageDownloadUrl: snapshot.downloadURL })) // uploads the picture and gets the download url
-    // console.log(this.state)
-    // get a reference to database service
-    // let database = firebase.database()
+
     let title = this.state.title
     let category = this.state.category
     let imageDownloadUrl = this.state.imageDownloadUrl
@@ -82,7 +79,7 @@ class CreatePage extends Component {
     let categoryToAdd = this.state.newCategory
     let categoryRef = firebase.database().ref('/categories/')
     if (categoryToAdd.length < 3) {
-      toastr.warning('Category name too short, at least 3 letters')
+       return toastr.warning('Category name too short, at least 3 letters')
     } else {
       let newCategoryRef = categoryRef.push()
       newCategoryRef.set({name: categoryToAdd})
@@ -118,19 +115,19 @@ class CreatePage extends Component {
                   />
               </div>
 
-              <div class='form-inline'>
-                <div class='form-group mr-3 mb-2 p-0 col-9'>
+              <div className='form-inline'>
+                <div className='form-group mr-3 mb-2 p-0 col-9'>
                   <input
                     value={this.state.newCategory}
                     onChange={this.onChange}
                     name='newCategory'
                     type='text'
-                    class='form-control col'
+                    className='form-control col'
                     id='add-new-category'
                     placeholder='Add new category'
                   />
                 </div>
-                <button onClick={this.onCategoryAdd} class='btn btn-primary mb-2'>
+                <button onClick={this.onCategoryAdd} className='btn btn-primary mb-2'>
                   Add category
                 </button>
               </div>

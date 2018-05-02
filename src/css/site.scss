@@ -40,6 +40,10 @@ body {
       color: white;
       border: 1px solid white;
     }
+    .fa-chevron-right:before, .fa-chevron-left:before {
+      color: white;
+      font-size: 30px;
+    }
     .where {
       background: #06719f;
     }
@@ -50,7 +54,6 @@ body {
       white-space: nowrap;
     }
     #map {
-      height: 300px;
       width: 100%;
      }
      .tip {
@@ -80,12 +83,6 @@ body {
       background-repeat: no-repeat;
       height: 60vh;
       background-position-x: center;
-    }
-    .bg-trainer-descr {
-      background-image: url('../images/art.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position-x: -56px;
     }
     .link-colors-trainer {
       color: #06719f;
@@ -121,10 +118,12 @@ body {
   }
 }
 
-@media (max-width: 990px) {
-  .btnClrMobile {
-    color: white;
-    font-weight: bold;
+@media (max-width: 768px) {
+  body {
+    .wrapper {
+      width: 100%;
+      margin: 0 auto;
+    }
   }
 }
 @media (max-width: 576px) {

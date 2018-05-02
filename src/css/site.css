@@ -47,6 +47,11 @@ body main .jumbotron {
   border: 1px solid white;
 }
 
+body main .fa-chevron-right:before, body main .fa-chevron-left:before {
+  color: white;
+  font-size: 30px;
+}
+
 body main .where {
   background: #06719f;
 }
@@ -59,7 +64,6 @@ body main .short-descr {
 }
 
 body main #map {
-  height: 300px;
   width: 100%;
 }
 
@@ -95,13 +99,6 @@ body main .bg-trainer {
   background-position-x: center;
 }
 
-body main .bg-trainer-descr {
-  background-image: url("../images/art.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-x: -56px;
-}
-
 body main .link-colors-trainer {
   color: #06719f;
 }
@@ -133,10 +130,10 @@ body .row {
   }
 }
 
-@media (max-width: 990px) {
-  .btnClrMobile {
-    color: white;
-    font-weight: bold;
+@media (max-width: 768px) {
+  body .wrapper {
+    width: 100%;
+    margin: 0 auto;
   }
 }
 

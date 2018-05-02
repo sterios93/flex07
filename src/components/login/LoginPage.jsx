@@ -22,17 +22,12 @@ class Login extends Component {
   }
   onChange (e) {
     this.setState({[e.target.name]: e.target.value})
-    let password = this.state.password
-    password.length > 4 ? this.setState({validPassword: true}) : this.setState({validPassword: false})
   }
   onSubmit (e) {
     e.preventDefault()
     let email = this.state.email
     let password = this.state.password
-
-    password.length < 4
-      ? this.setState({ validPassword: false })
-      : this.props.loginThunkfunc(email, password)
+      this.props.loginThunkfunc(email, password)
   }
 
   componentWillReceiveProps (nextProps) {
@@ -44,10 +39,11 @@ class Login extends Component {
   }
 
   render () {
+    let errorMessage = this.props.loginInfo.errorMsg
     return (
       <div className='container login-page'>
         <div className='row d-flex justify-content-center'>
-          <form onSubmit={this.onSubmit} className='col-12 col-sm-4 text-center mt-5'>
+          <form onSubmit={this.onSubmit} className='col-12 col-sm-6 text-center mt-5'>
             { this.state.error ? <p> {this.state.errorMsg} </p> : null }
             <div className='form-group'>
               <label htmlFor='email'>Email address</label>
@@ -71,7 +67,7 @@ class Login extends Component {
                 placeholder='Password'
                 name='password'
               />
-              {this.state.validPassword ? <p className='text-success'> Password validation passed </p> : <p className='text-danger'>Password is too short </p>}
+              {errorMessage && <p className='text-danger'>{errorMessage}</p>}
             </div>
             <button type='submit' className='btn btn-primary'>Submit</button>
           </form>

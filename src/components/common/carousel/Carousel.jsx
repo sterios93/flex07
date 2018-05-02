@@ -2,11 +2,12 @@ import React from 'react'
 
 let Carousel = (props) => {
   let col = props.col
+  let order = props.order
   let height = props.height
-  let pic1 = 'https://firebasestorage.googleapis.com/v0/b/flex07-kinski.appspot.com/o/carousel-home%2F3.jpg?alt=media&token=ccc83292-193b-47a2-8399-26f8c9cc2955'
+  let pic1 = 'https://firebasestorage.googleapis.com/v0/b/flex07-kinski.appspot.com/o/carousel-home%2Freceived_1647131752246581.jpeg?alt=media&token=f9e812ea-9083-440f-bb0a-28bb209be23d'
   let pic2 = 'https://firebasestorage.googleapis.com/v0/b/flex07-kinski.appspot.com/o/carousel-home%2F_20161128_192745.jpg?alt=media&token=8d9c8956-e46f-4a52-8ec7-f99d33f3fa85'
   let pic3 = 'https://firebasestorage.googleapis.com/v0/b/flex07-kinski.appspot.com/o/carousel-home%2F_20161124_173722.jpg?alt=media&token=2dac11c9-174d-4c70-9b8d-d0e25b11d60b'
-  let pic4 = 'https://firebasestorage.googleapis.com/v0/b/flex07-kinski.appspot.com/o/carousel-home%2Freceived_1647131752246581.jpeg?alt=media&token=f9e812ea-9083-440f-bb0a-28bb209be23d'
+  let pic4 = 'https://firebasestorage.googleapis.com/v0/b/flex07-kinski.appspot.com/o/carousel-home%2F3.jpg?alt=media&token=ccc83292-193b-47a2-8399-26f8c9cc2955'
 
   const photoStyles = {
     width: '100%',
@@ -37,7 +38,7 @@ let Carousel = (props) => {
     backgroundPosition: 'center'
   }
   return (
-    <div className={`${col} p-0`}>
+    <div className={`${col} ${order} p-0`}>
       <div id='carouselExampleControls' className='carousel slide' data-interval='false' data-ride='carousel'>
         <div className={`carousel-inner ${height}`}>
           <div className='carousel-item active' style={photoStyles}>
